@@ -7,7 +7,7 @@ urlpatterns = patterns(
     '',
 
     # TODO: add INSTALLED_APPS and use app name
-    # url(r'^$', '{{ project_name }}.views.core', name=''),
+    url(r'^$', include('core.urls', namespace='core', app_name='core')),
     # url(r'^app/', include('app.urls')),
 
     url(r'^admin/', include(admin.site.urls)),

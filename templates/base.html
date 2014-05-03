@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{% endblock %} - {{ project_name }}</title>
+</head>
+<body>
+{% block header %}
+<h2>header</h2>
+<div class="container">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="{% url 'core:index' %}">index</a>
+      <ul class="nav">
+        <li><a href="#">nav1</a></li>
+        <li><a href="#">nav2</a></li>
+        <li><a href="#">nav3</a></li>
+        <li><a href="#">nav4</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block content %}
+{% endblock %}
+{% block footer %}
+<h2>foooter</h2>
+{% endblock %}
+</body>
+</html>

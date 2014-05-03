@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+<title>{% block title %}base - {{ project_name }} {% endblock %}</title>
+  {% block content %}
+
+  <div class="btn-group">
+  <a href="{% url 'core:index' %}" class="info">button1</a>
+  </div>
+
+{% endblock %}
