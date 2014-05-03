@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from {{ project_name }}.settings.base import *  # NOQA
 
-DEBN = True
+DEBUG = True
 TEMPLATE_DEBUG = True
 
 
@@ -18,7 +18,7 @@ INSTALLED_APPS += (
 )
 
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE_CLASSES += (
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
