@@ -4,7 +4,11 @@ Django settings for {{ project_name }} project.
 """
 
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+BASE_DIR = os.path.abspath(os.path.join(
+    os.path.dirname(__file__), # settings dir
+    os.pardir, # project dir
+    os.pardir,
+))
 
 SECRET_KEY = '{{ secret_key }}'
 
