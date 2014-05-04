@@ -4,9 +4,13 @@ Django settings for {{ project_name }} project.
 """
 
 import os
-BASE_DIR = os.path.abspath(os.path.join(
-    os.path.dirname(__file__), # settings dir
-    os.pardir, # project dir
+APPS_DIR = os.path.abspath(os.path.join(
+    os.path.dirname(__file__),  # settings dir
+    os.pardir,  # project dir
+    os.pardir,
+))
+REOPSITORY_DIR = os.path.abspath(os.path.join(
+    APPS_DIR,
     os.pardir,
 ))
 
@@ -45,7 +49,7 @@ WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(APPS_DIR, 'db.sqlite3'),
     }
 }
 
@@ -57,11 +61,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "statics"),
+    os.path.join(REOPSITORY_DIR, "statics"),
 )
 
 TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'templates'),
+    os.path.join(REOPSITORY_DIR, 'templates'),
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 )
