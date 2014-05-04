@@ -3,8 +3,19 @@
 <title>{% block title %}base - {{ project_name }} {% endblock %}</title>
   {% block content %}
 
-  <div class="btn-group">
-  <a href="{% url 'core:index' %}" class="info">button1</a>
+<div class="panel panel-default">
+  <div class="panel-heading">Panel heading</div>
+  <div class="panel-body">
+    <p>...</p>
   </div>
+
+  <ul class="list-group">
+    <li class="list-group-item">panel1</li>
+    <li class="list-group-item">panel2</li>
+    <li class="list-group-item">panel3</li>
+    <li class="list-group-item">panel4</li>
+    <li class="list-group-item">panel5</li>
+  </ul>
+</div>
 
 {% endblock %}
