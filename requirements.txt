@@ -14,3 +14,10 @@ sqlparse==0.1.11
 
 # django devserver
 django-devserver==0.8.0
+
+# sphinx
+Sphinx==1.2.2
+Pygments==1.6
+MarkupSafe==0.21
+docutils==0.11
+Jinja2==2.7.2
