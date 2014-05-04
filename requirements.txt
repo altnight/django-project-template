@@ -14,3 +14,10 @@ sqlparse==0.1.11
 
 # django devserver
 django-devserver==0.8.0
+
+# ansible
+ansible==1.5.5
+paramiko==1.13.0
+PyYAML==3.11
+pycrypto==2.6.1
+ecdsa==0.11
