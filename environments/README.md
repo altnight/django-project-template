@@ -28,9 +28,21 @@ brew install ssh-copy-id
 ssh-copy-id -i path/to/id_rsa.pub vagrant@192.168.100.100
 ```
 
-* play ansible
-
-ping
+* test ping
+if ok, showen this.
 ```sh
 ansible -i hosts 192.168.100.100 -m ping -vvvv
+```
+
+    192.168.100.100 | success >> {
+        "changed": false,
+        "ping": "pong"
+    }
+
+if failed, use `-vvvv` option(debug)
+
+* play ansible
+
+```sh
+ansible-playbook -i hosts playbook.yml
 ```
