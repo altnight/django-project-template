@@ -1,5 +1,10 @@
 ---
-
+- hosts: dev
+  user: vagrant
+  tasks:
+    - apt: update_cache=yes cache_valid_time=60
+      tags: common
+      sudo: yes
 
 - hosts: dev
   user: vagrant
